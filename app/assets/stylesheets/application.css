@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
  */
+#name{
+	font-size: 1em;
+	font-weight: bold;
+}
+#content{
+	font-size: 1em;
+}
+.admin{
+	font-size: 0.8em;
+}
+.status{
+	border-bottom: solid 1px #ccc;
+}
