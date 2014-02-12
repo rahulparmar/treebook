@@ -4,7 +4,7 @@
 <%= link_to 'Post a New Status', new_status_path, class: "btn btn-success"%>
 <% @statuses.each do |status| %>
 <div class="status">
-  <span id="name"><%= status.name %></span> 
+  <span id="name"><%= status.user.full_name %></span> 
   <br>
   <span id="content"><%= status.content %></span>
   <div class="admin">
