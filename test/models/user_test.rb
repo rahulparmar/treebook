@@ -26,18 +26,16 @@ class UserTest < ActiveSupport::TestCase
 	 	user.email = "rahul.parmar@gmail.com"
 	 	user.first_name = "Rahul"
 	 	user.last_name = "Parmar"
-	 	user.password = "password"
-	 	user.password_confirmation = "password"
+	 	user.encrypted_password = "whatever"
 	 	assert !user.save, "User was saved without a profile name"
 	 	assert !user.errors[:profile_name].empty?, "User does not have a unique profile name"
 	 end
 
 	test "a user should have a profile name without spaces" do
 		user = User.new
-		user.profile_name = "My Profile With Spaces"
 		assert !user.save
-		assert !user.errors[:profile_name].empty?
-		assert user.errors[:profile_name].include?("Must be formatted correctly.")
+		assert !user.errors[:profile_name].empty?, "Profile name is empty."
+		assert user.errors[:profile_name].include?("must be formatted correctly.")
 	end
-	
+
 end

@@ -21,16 +21,23 @@
 				<%if user_signed_in? %>
 
 					<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
-					<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+					<li><%= link_to "Log Out", logout_path %></li>
 				<%else %>
-					<li><%= link_to "Sign In", new_user_session_path %></li>
+					<li> <%= link_to "Register", register_path %> </li>
+					<li><%= link_to "Sign In", login_path %></li>
 				<%end%>
 			</ul>
 		</div>
 	</div>
 </nav>	
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
+
+<div class="container">
+	<% flash.each do |type, message| %>
+		<div class="alert <%= flash_class type %>">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			<%= message %>
+	<% end %>
+</div>
 
 <%= yield %>
 
