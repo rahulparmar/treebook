@@ -46,3 +46,6 @@ end
 gem 'devise'
 gem 'simple_form'
 gem 'rspec'
+group :test do
+	gem 'shoulda'
+end

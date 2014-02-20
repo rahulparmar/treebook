@@ -1,6 +1,13 @@
 rahul:
- profile_name: "linnaea17"
+ profile_name: "parmstar"
  email: "rahul.parmar@gmail.com"
  first_name: "Rahul"
  last_name: "Parmar"
+ encrypted_password: "$2a$10$i1ykqrYnc61YsejY4egWV.NVTEdaotii5FcPZ/Q4phaz..."
+
+linnaea:
+ profile_name: "linnaea17"
+ email: "linnaea.mancini@gmail.com"
+ first_name: "linnaea"
+ last_name: "Mancini"
  encrypted_password: "$2a$10$i1ykqrYnc61YsejY4egWV.NVTEdaotii5FcPZ/Q4phaz..."
